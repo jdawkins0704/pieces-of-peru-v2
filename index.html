@@ -16,10 +16,16 @@
       --muted: #6f685f;
       --line: rgba(34, 28, 24, 0.12);
 
-      --terracotta: #a6461d;
-      --deep-brown: #5a2a19;
-      --teal: #5aa7a3;
-      --sage: #8b9274;
+      --jalea-blue: #0f4c81;
+      --jalea-blue-dark: #0a3559;
+      --jalea-white: #ffffff;
+      --jalea-sky: #dceaf6;
+
+      --brasas-red: #b32025;
+      --brasas-red-dark: #7e1418;
+      --brasas-yellow: #f2c230;
+      --brasas-cream: #fff2c7;
+
       --gold: #c6943f;
 
       --shadow: 0 20px 60px rgba(34, 28, 24, 0.08);
@@ -212,7 +218,7 @@
     .hero-visual::before {
       width: 300px;
       height: 300px;
-      background: var(--terracotta);
+      background: var(--brasas-red);
       top: -80px;
       right: -50px;
     }
@@ -220,7 +226,7 @@
     .hero-visual::after {
       width: 220px;
       height: 220px;
-      background: var(--teal);
+      background: var(--jalea-blue);
       bottom: -40px;
       left: -50px;
     }
@@ -335,14 +341,29 @@
 
     .restaurant-card--jalea .restaurant-top {
       background:
-        linear-gradient(145deg, rgba(0,0,0,0.12), rgba(0,0,0,0.08)),
-        linear-gradient(140deg, #1f1715 0%, #4f2a22 55%, #8c5f50 100%);
+        linear-gradient(145deg, rgba(15, 76, 129, 0.92), rgba(10, 53, 89, 0.95)),
+        linear-gradient(140deg, var(--jalea-blue-dark) 0%, var(--jalea-blue) 60%, #3f7fb3 100%);
     }
 
     .restaurant-card--brasas .restaurant-top {
       background:
-        linear-gradient(145deg, rgba(0,0,0,0.08), rgba(0,0,0,0.06)),
-        linear-gradient(140deg, #5c2d1b 0%, #9d5429 55%, #d59c63 100%);
+        linear-gradient(145deg, rgba(179, 32, 37, 0.92), rgba(126, 20, 24, 0.95)),
+        linear-gradient(140deg, var(--brasas-red-dark) 0%, var(--brasas-red) 60%, var(--brasas-yellow) 100%);
+    }
+
+    .restaurant-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .restaurant-logo {
+      max-width: 180px;
+      width: auto;
+      max-height: 70px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.14));
     }
 
     .restaurant-kicker {
@@ -402,6 +423,42 @@
       flex-wrap: wrap;
       margin-top: auto;
       padding-top: 0.3rem;
+    }
+
+    .restaurant-card--jalea .pill {
+      background: var(--jalea-sky);
+      color: var(--jalea-blue-dark);
+      border-color: rgba(15, 76, 129, 0.18);
+    }
+
+    .restaurant-card--brasas .pill {
+      background: var(--brasas-cream);
+      color: var(--brasas-red-dark);
+      border-color: rgba(179, 32, 37, 0.18);
+    }
+
+    .restaurant-card--jalea .button--dark {
+      background: var(--jalea-blue);
+      border-color: var(--jalea-blue);
+      color: var(--jalea-white);
+    }
+
+    .restaurant-card--jalea .button--light {
+      background: rgba(15, 76, 129, 0.08);
+      border-color: rgba(15, 76, 129, 0.22);
+      color: var(--jalea-blue-dark);
+    }
+
+    .restaurant-card--brasas .button--dark {
+      background: var(--brasas-red);
+      border-color: var(--brasas-red);
+      color: var(--jalea-white);
+    }
+
+    .restaurant-card--brasas .button--light {
+      background: rgba(242, 194, 48, 0.18);
+      border-color: rgba(179, 32, 37, 0.18);
+      color: var(--brasas-red-dark);
     }
 
     .experience {
@@ -601,6 +658,9 @@
 
         <div class="hero-visual reveal" aria-hidden="true">
           <div class="hero-panel">
+            <div class="pieces-logo-wrap">
+  <img src="logo.png" alt="Pieces of Peru logo" class="pieces-logo">
+</div>
             <h2>It’s a ritual to eat.</h2>
             <p>
               From elevated evenings to vibrant everyday meals, Pieces of Peru brings together experiences designed to feel distinct, memorable, and deeply rooted in Peruvian tradition.
@@ -643,6 +703,9 @@
         <div class="restaurant-grid">
           <article class="restaurant-card restaurant-card--jalea reveal">
             <div class="restaurant-top">
+              <div class="restaurant-logo-wrap">
+                <img src="jalea-logo.webp" alt="Jalea logo" class="restaurant-logo">
+              </div>
               <div class="restaurant-kicker">Refined dining</div>
               <h3>Jalea</h3>
               <p>
@@ -670,6 +733,9 @@
 
           <article class="restaurant-card restaurant-card--brasas reveal">
             <div class="restaurant-top">
+              <div class="restaurant-logo-wrap">
+                <img src="brasas-logo.png" alt="Brasas logo" class="restaurant-logo">
+              </div>
               <div class="restaurant-kicker">Everyday dining</div>
               <h3>Brasas</h3>
               <p>

@@ -628,7 +628,7 @@ img {
 .restaurant-card--jalea .restaurant-top {
   background:
     linear-gradient(145deg, rgba(0,0,0,0.15), rgba(0,0,0,0.05)),
-    linear-gradient(140deg, var(--jalea-dark) 0%, var(--jalea) 55%, #d96b3b 100%);
+    linear-gradient(140deg, var(--jalea-dark) 0%, var(--jalea) 55%, #f41809 100%);
 }
 
 .restaurant-card--brasas .restaurant-top {
@@ -647,7 +647,7 @@ img {
 .restaurant-card--jalea .restaurant-top {
   background:
     linear-gradient(145deg, rgba(0,0,0,0.15), rgba(0,0,0,0.05)),
-    linear-gradient(140deg, #7a1e0f 0%, #b33a1a 55%, #d96b3b 100%) !important;
+    linear-gradient(140deg, #e92406 0%, #ef3805 55%, #ff0303 100%) !important;
   color: #fff;
 }
 
@@ -693,7 +693,6 @@ img {
   line-height: 1;
 }
 
-/* Jalea card top */
 .concept-card--jalea,
 .concept-card--jalea .card-top,
 .concept-card--jalea .restaurant-top,
@@ -705,7 +704,6 @@ img {
   color: #fff !important;
 }
 
-/* Brasas card top */
 .concept-card--brasas,
 .concept-card--brasas .card-top,
 .concept-card--brasas .restaurant-top,
@@ -717,7 +715,6 @@ img {
   color: #fff !important;
 }
 
-/* Make text readable on the colored tops */
 .concept-card--jalea p,
 .concept-card--brasas p,
 .concept-card--jalea h3,
@@ -733,4 +730,182 @@ img {
 .restaurant-card--jalea .restaurant-top .eyebrow,
 .restaurant-card--brasas .restaurant-top .eyebrow {
   color: rgba(255,255,255,0.9) !important;
+}
+
+:root {
+  --jalea-blue: #0f4c81;
+  --jalea-blue-dark: #0a3559;
+  --jalea-white: #ffffff;
+  --jalea-sky: #dceaf6;
+
+  --brasas-red: #b32025;
+  --brasas-red-dark: #ef0b13;
+  --brasas-yellow: #f2c230;
+  --brasas-cream: #fff2c7;
+}
+
+.restaurant-card--jalea .restaurant-top {
+  background:
+    linear-gradient(145deg, rgba(15, 76, 129, 0.92), rgba(10, 53, 89, 0.95)),
+    linear-gradient(140deg, var(--jalea-blue-dark) 0%, var(--jalea-blue) 60%, #3f7fb3 100%);
+}
+
+.restaurant-card--brasas .restaurant-top {
+  background:
+    linear-gradient(145deg, rgba(179, 32, 37, 0.92), rgba(126, 20, 24, 0.95)),
+    linear-gradient(140deg, var(--brasas-red-dark) 0%, var(--brasas-red) 60%, var(--brasas-yellow) 100%);
+}
+
+.restaurant-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.restaurant-logo {
+  max-width: 180px;
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.restaurant-card--jalea .pill {
+  background: var(--jalea-sky);
+  color: var(--jalea-blue-dark);
+}
+
+.restaurant-card--brasas .pill {
+  background: var(--brasas-cream);
+  color: var(--brasas-red-dark);
+}
+
+.restaurant-card--jalea .button--dark {
+  background: var(--jalea-blue);
+  border-color: var(--jalea-blue);
+  color: white;
+}
+
+.restaurant-card--brasas .button--dark {
+  background: var(--brasas-red);
+  border-color: var(--brasas-red);
+  color: white;
+}
+
+/* FINAL CARD COLOR OVERRIDES */
+
+:root {
+  --jalea-blue: #388bea;
+  --jalea-blue-dark: #5297ff;
+  --jalea-blue-light: #42a5f5;
+  --jalea-sky: #dbeafe;
+
+  --brasas-red: #fb0303;
+  --brasas-red-dark: #fc0303;
+  --brasas-red-bright: #f80d09;
+  --brasas-yellow: #e4e815;
+  --brasas-cream: #dbe81a;
+}
+
+/* brighter top sections */
+.restaurant-card--jalea .restaurant-top {
+  background: linear-gradient(
+    135deg,
+    var(--jalea-blue-light) 0%,
+    var(--jalea-blue) 60%,
+    var(--jalea-blue-light) 100%
+  ) !important;
+  color: #fff !important;
+}
+
+.restaurant-card--brasas .restaurant-top {
+  background: linear-gradient(
+    135deg,
+    var(--brasas-red-bright) 0%,
+    var(--brasas-red) 58%,
+    var(--brasas-red-bright) 82%,
+    var(--brasas-yellow) 100%
+  ) !important;
+  color: #fff !important;
+}
+
+/* make text stay bright on top sections */
+.restaurant-card--jalea .restaurant-top h3,
+.restaurant-card--jalea .restaurant-top p,
+.restaurant-card--jalea .restaurant-top .restaurant-kicker,
+.restaurant-card--brasas .restaurant-top h3,
+.restaurant-card--brasas .restaurant-top p,
+.restaurant-card--brasas .restaurant-top .restaurant-kicker {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* pills */
+.restaurant-card--jalea .pill {
+  background: var(--jalea-sky) !important;
+  color: var(--jalea-blue-dark) !important;
+  border: 1px solid rgba(21, 101, 192, 0.18) !important;
+}
+
+.restaurant-card--brasas .pill {
+  background: var(--brasas-cream) !important;
+  color: var(--brasas-red-bright) !important;
+  border: 1px solid rgba(246, 4, 4, 0.18) !important;
+}
+
+.restaurant-card--jalea .button--dark {
+  background: var(--jalea-blue) !important;
+  border-color: var(--jalea-blue) !important;
+  color: #fff !important;
+}
+
+.restaurant-card--brasas .button--dark {
+  background: var(--brasas-red) !important;
+  border-color: var(--brasas-red) !important;
+  color: #fff !important;
+}
+
+.restaurant-card--jalea .button--light {
+  background: #ffffff !important;
+  color: var(--jalea-blue-dark) !important;
+  border-color: rgba(21, 101, 192, 0.2) !important;
+}
+
+.restaurant-card--brasas .button--light {
+  background: #fff8e1 !important;
+  color: var(--brasas-red-dark) !important;
+  border-color: rgba(246, 6, 6, 0.2) !important;
+}
+ */
+
+.pieces-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.pieces-logo {
+  width: 240px;
+  max-width: 85%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
+}
+
+/* remove background behind Pieces of Peru logo */
+
+.pieces-logo-wrap {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.pieces-logo {
+  background: transparent !important;
+}
+
+.pieces-logo-wrap,
+.pieces-logo-wrap * {
+  background: transparent !important;
+  box-shadow: none !important;
 }

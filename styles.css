@@ -32,10 +32,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at top left, rgba(141, 76, 48, 0.14), transparent 35%),
-    radial-gradient(circle at top right, rgba(40, 48, 56, 0.14), transparent 30%),
-    var(--bg);
+  background: var(--bg);
 }
 
 body.brand-jalea {
@@ -875,37 +872,29 @@ img {
   color: var(--brasas-red-dark) !important;
   border-color: rgba(246, 6, 6, 0.2) !important;
 }
- */
 
 .pieces-logo-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 18px;
+
+  width: 100%;
+  pointer-events: none;
 }
 
 .pieces-logo {
-  width: 240px;
-  max-width: 85%;
+  width: 380px;        /* bigger */
+  max-width: 80%;      /* responsive */
   height: auto;
+
+  display: block;
   object-fit: contain;
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
-}
 
-/* remove background behind Pieces of Peru logo */
-
-.pieces-logo-wrap {
-  background: transparent !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-}
-
-.pieces-logo {
-  background: transparent !important;
-}
-
-.pieces-logo-wrap,
-.pieces-logo-wrap * {
-  background: transparent !important;
-  box-shadow: none !important;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.12));
 }

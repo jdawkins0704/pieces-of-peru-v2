@@ -95,13 +95,29 @@
     }
 
     .nav-brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--terracotta), var(--gold));
-      box-shadow: 0 10px 30px rgba(166, 70, 29, 0.18);
-      flex-shrink: 0;
-    }
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: #f3ede5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #000;
+
+  box-shadow: 0 10px 30px rgba(34, 28, 24, 0.08);
+  flex-shrink: 0;
+}
+
+.nav-brand-mark-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
     .nav-links {
       display: flex;
@@ -617,15 +633,35 @@
         padding-right: 1.4rem;
       }
     }
+    .pieces-logo-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.pieces-logo {
+  width: 440px;
+  max-width: 82%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.12));
+}
   </style>
+
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
       <a href="#top" class="nav-brand" aria-label="Pieces of Peru home">
-        <span class="nav-brand-mark" aria-hidden="true"></span>
-        <span>Pieces of Peru</span>
-      </a>
+  <span class="nav-brand-mark" aria-hidden="true">
+    <img src="header-circle-image.png" alt="" class="nav-brand-mark-image">
+  </span>
+  <span>Pieces of Peru</span>
+</a>
 
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#about">About</a>
@@ -656,17 +692,13 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="hero-panel">
-            <div class="pieces-logo-wrap">
-  <img src="logo.png" alt="Pieces of Peru logo" class="pieces-logo">
+        <div class="hero-visual reveal">
+  <div class="pieces-logo-wrap">
+    <img src="pieces-logo.png" alt="Pieces of Peru logo" class="pieces-logo">
+  </div>
+
+  </div>
 </div>
-            <h2>It’s a ritual to eat.</h2>
-            <p>
-              From elevated evenings to vibrant everyday meals, Pieces of Peru brings together experiences designed to feel distinct, memorable, and deeply rooted in Peruvian tradition.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
